@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "buscagov-53030539"
+  },
+  "preview": {
+    "server": {
+      "web": {
+        "command": ["./devserver.sh"],
+        "port": 8000
+      }
+    }
+  }
+}
