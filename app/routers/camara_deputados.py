@@ -38,7 +38,9 @@ def get_deputado_by_id(id: int):
     """
     Retorna os dados cadastrais de um parlamentar específico.
     """
-    return {"message": f"Endpoint para detalhes do deputado com ID: {id}. (Não implementado)"}
+    base_url = "https://dadosabertos.camara.leg.br/api/v2"
+    response = requests.get(f"{base_url}/deputados/{id}")
+    return response.json()
 
 @router.get("/deputados/{id}/despesas", tags=["Deputados"])
 def get_deputado_despesas(
